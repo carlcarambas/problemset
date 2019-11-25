@@ -126,3 +126,11 @@ RES: 2
 RES: 3
 DURATION: 514
 ```
+
+
+##### To run application
+#### uncomment solutions that are commented out in index.js line 89 - 139
+
+```batch
+npm run start
+```

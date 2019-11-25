@@ -1,10 +1,23 @@
 {
   "name": "problemset",
   "version": "1.0.0",
+  "scripts": {
+    "test": "mocha",
+    "start": "npm run build && node bin/dev",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && mkdir dist && babel index.js -s -d dist && babel lib -s -d dist/lib"
+  },
   "dependencies": {
-    "rand-token": "^0.2.1"
+    "generic-pool": "^3.7.1",
+    "rand-token": "0.4.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
     "mocha": "^2.4.5"
   }
 }
